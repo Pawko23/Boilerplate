@@ -11,6 +11,11 @@ export default defineConfig([
 		rules: {
 			"no-unused-vars": "warn",
 			"no-undef": "warn",
+            "no-console": "error",
+            "eqeqeq": "error",
+            "semi": ["error", "always"],
+            "no-trailing-spaces": "error",
+            "indent": ["error", 4]
 		},
 	},
 ]);
