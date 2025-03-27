@@ -9,9 +9,11 @@
     "gulp": "^5.0.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.23.0",
     "autoprefixer": "^10.4.21",
     "clean-css": "^5.3.3",
     "del": "^8.0.0",
+    "eslint": "^9.23.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-postcss": "^10.0.0",
     "gulp-sass": "^6.0.1",
