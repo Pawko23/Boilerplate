@@ -4,6 +4,12 @@ import js from '@eslint/js';
 export default defineConfig([
     {
         files: ["**/*.js"],
+        languageOptions: {
+            globals: {
+                window: 'readonly',
+                document: 'readonly',
+            },
+        },
         plugins: {
             js,
         },

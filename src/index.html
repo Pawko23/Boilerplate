@@ -7,6 +7,19 @@
     <title>Boilerplate</title>
 </head>
 <body>
-    <div>Siemano kolano</div>
+    <div class="employee-container">
+        <div class="employee-container__form">
+            <input 
+                type="text" 
+                class="employee-container__input"
+                placeholder="Enter employee name"
+                id="employeeInput"
+            />
+            <button class="employee-container__add-button" id="addButton">Add</button>
+        </div>
+        <ul class="employee-container__list" id="employeeList"></ul>
+    </div>
+
+    <script src="./js/employeeList.js"></script>
 </body>
 </html>
