@@ -1,22 +1,24 @@
-var a = 5
+// -------------------- I CREATED THIS FILE FOR ESLint RULES TESTING PURPOSES, SO I'LL BE COMMENTING / UNCOMMENTING IT FROM TIME TO TIME. Peace --------------------
 
-let unusedVar = 123;
+// var a = 5
 
-let x = 10
-x = x + 5
+// let unusedVar = 123;
 
-function test(){
-console.log("Hello")
-}
+// let x = 10
+// x = x + 5
 
-let arrowFunc=()=>{console.log("arrow")}
+// function test(){
+// console.log("Hello")
+// }
 
-import { something } from './module.js'
-import { something as another } from './module.js'
+// let arrowFunc=()=>{console.log("arrow")}
 
-const obj = {
-    one: 1,
-    two: 2
-}
+// import { something } from './module.js'
+// import { something as another } from './module.js'
 
-console.log(nonExistentVar)
+// const obj = {
+//     one: 1,
+//     two: 2
+// }
+
+// console.log(nonExistentVar)
