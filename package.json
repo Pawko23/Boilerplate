@@ -2,16 +2,18 @@
   "name": "boilerplate",
   "version": "1.0.0",
   "description": "",
-  "main": "gulpfile.babel.js",
   "dependencies": {
     "browser-sync": "^3.0.3",
-    "browsersync": "0.0.1-security",
-    "gulp": "^5.0.0"
+    "browsersync": "0.0.1-security"
   },
   "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
+    "@babel/register": "^7.27.1",
     "autoprefixer": "^10.4.21",
     "clean-css": "^5.3.3",
     "del": "^8.0.0",
+    "gulp": "^5.0.1",
     "gulp-clean-css": "^4.3.0",
     "gulp-postcss": "^10.0.0",
     "gulp-sass": "^6.0.1",
