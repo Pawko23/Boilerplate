@@ -5,10 +5,10 @@ const server = browserSync.create();
 export function serve(done) {
     server.init({
         server: {
-            baseDir: "./dist"
+            baseDir: "./dist",
         },
         notify: false,
-        open: false
+        open: false,
     });
     done();
 };

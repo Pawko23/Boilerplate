@@ -2,6 +2,7 @@
   "name": "boilerplate",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "dependencies": {
     "browser-sync": "^3.0.3",
     "browsersync": "0.0.1-security"
@@ -10,11 +11,14 @@
     "@babel/core": "^7.28.0",
     "@babel/preset-env": "^7.28.0",
     "@babel/register": "^7.27.1",
+    "@eslint/js": "^9.31.0",
     "autoprefixer": "^10.4.21",
     "clean-css": "^5.3.3",
     "del": "^8.0.0",
+    "eslint": "^9.31.0",
     "gulp": "^5.0.1",
     "gulp-clean-css": "^4.3.0",
+    "gulp-eslint-new": "^2.4.0",
     "gulp-postcss": "^10.0.0",
     "gulp-sass": "^6.0.1",
     "gulp-sourcemaps": "^3.0.0",
@@ -22,7 +26,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "gulp"
+    "build": "gulp",
+    "lint": "eslint \"src/**/*.js\" \"tasks/**/*.js\" \"gulpfile.js\""
   },
   "keywords": [],
   "author": "",
