@@ -10,7 +10,7 @@ Additionally, this project utilizes **Gulp** as a build tool. The idea behind th
 ## Tech Overview
 This boilerplate comes pre-configured with the following tools:
 * **Node Version Manager (NVM)(.nvmrc)** - ensures consistency in Node.js versions across different environments
-* **Gulp (.gulpfile.babel.js)** - A task runner to automate development tasks like compiling CSS and JS.
+* **Gulp (gulpfile.js)** - A task runner to automate development tasks like compiling CSS and JS.
 * **Babel** - Transpiles modern JavaScript (ES6+) into backward-compatible versions for older browsers
 * **ESLint** - Ensures code quality and enforces best practises
 * **Autoprefixer** - Adds vendor prefixes to CSS for better browser support
@@ -43,11 +43,11 @@ npm install
 ```
 2. Run the following command to start the development server with live reloading:
 ```
-gulp
+npm run dev
 ```
 3. In order to generate optimized files for production, run:
 ```
-gulp build
+npm run build
 ```
 
 ## My Learning Goals
