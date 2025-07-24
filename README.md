@@ -22,18 +22,18 @@ This boilerplate comes pre-configured with the following tools:
 
 ## Project Structure
 ```
-├── scss/             # SCSS stylesheets
-│   ├── abstracts/    # Variables, mixins, functions
-│   ├── components/   # Reusable UI components
-│   ├── main.scss     # Main SCSS entry file
-├── .nvmrc            # Node.js version specification
-├── .gulpfile.js      # Gulp task runner config
-├── package.json      # Project dependencies and scripts
-├── .editorconfig     # Code style configuration
-├── .gitignore        # Ignored files for Git
-├── browserlist       # Target browsers specification
-├── src/              # Source files (HTML, SCSS, JS)
-├── dist/             # Compiled output (after build process)
+├── dist/               # Compiled output (after build process)
+├── src/                # Source files (HTML, SCSS, JS)
+|──── scss/             # SCSS stylesheets
+|      |── abstracts/   # Variables, mixins, functions
+|      |── components/  # Reusable UI components
+|      |── main.scss    # Main SCSS entry file
+├── .nvmrc              # Node.js version specification
+├── .gulpfile.js        # Gulp task runner config
+├── package.json        # Project dependencies and scripts
+├── .editorconfig       # Code style configuration
+├── .gitignore          # Ignored files for Git
+├── browserlist         # Target browsers specification
 ```
 
 ## Installation
