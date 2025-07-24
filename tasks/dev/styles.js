@@ -10,7 +10,7 @@ import { server } from './serve.js';
 const sass = gulpSass(dartSass);
 
 export function styles() {
-    return gulp.src("scss/main.scss")
+    return gulp.src("src/scss/main.scss")
         .pipe(gulpSourcemap.init())
         .pipe(sass().on("error", sass.logError))
         .pipe(GulpPostCss([autoprefixer()]))

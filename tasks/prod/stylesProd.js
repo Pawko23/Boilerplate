@@ -10,7 +10,7 @@ import gulpConcat from 'gulp-concat';
 const sass = gulpSass(dartSass);
 
 export function stylesProd() {
-    return gulp.src('scss/**/*.scss')
+    return gulp.src('src/scss/**/*.scss')
         .pipe(gulpSourcemap.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(GulpPostCss([autoprefixer()]))
