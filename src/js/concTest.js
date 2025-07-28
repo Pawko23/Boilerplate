@@ -1,0 +1,1 @@
+const addTwoIntegers = (a, b) => a + b;
