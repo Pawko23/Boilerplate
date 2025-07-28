@@ -1,6 +1,7 @@
 import gulp from 'gulp';
 import { clean } from './tasks/dev/clean.js';
 import { html } from './tasks/dev/html.js';
+import { htmlProd } from './tasks/prod/htmlProd.js';
 import { scripts } from './tasks/dev/scripts.js';
 import { scriptsProd } from './tasks/prod/scriptsProd.js';
 import { styles } from './tasks/dev/styles.js';
@@ -21,6 +22,6 @@ export const dev = gulp.series(
 export const build = gulp.series(
     lint,
     clean,
-    gulp.parallel(html, stylesProd, scriptsProd),
+    gulp.parallel(htmlProd, stylesProd, scriptsProd),
     rev,
 );
