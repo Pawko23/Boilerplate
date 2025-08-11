@@ -1,4 +1,6 @@
 @use 'variables' as *;
+@use 'fonts' as *;
+
 
 * {
     box-sizing: border-box;
@@ -7,8 +9,7 @@
 }
 
 body {
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;
+    font: 16px "Playwrite", sans-serif;
 }
 
 a {

@@ -1,9 +1,45 @@
+@use '../abstracts/' as *;
+@use '../generated' as *;
+
 .shrek-showcase {
-    position: absolute;    
+    position: absolute;  
     top: 5rem;
     
     &__title {
         text-align: center;
         width: 15rem;
+    }
+
+    &__sprites {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    &__icon {
+        display: inline-block;
+        background-repeat: no-repeat;
+
+        &--shrek1 {
+            @include sprite($icon-shrek1);
+        }
+
+        &--shrek2 {
+            @include sprite($icon-shrek2);
+        }
+
+        &--shrek3 {
+            @include sprite($icon-shrek3);
+        }
+
+        &--shrek4 {
+            @include sprite($icon-shrek4);
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .shrek-showcase__title, .shrek-showcase__icon, .shrek-showcase__icon-base64 {
+        display: none;
     }
 }

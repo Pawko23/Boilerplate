@@ -1,0 +1,123 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$icon-shrek1-name: 'icon-shrek1';
+$icon-shrek1-x: 0px;
+$icon-shrek1-y: 0px;
+$icon-shrek1-offset-x: 0px;
+$icon-shrek1-offset-y: 0px;
+$icon-shrek1-width: 256px;
+$icon-shrek1-height: 256px;
+$icon-shrek1-total-width: 522px;
+$icon-shrek1-total-height: 522px;
+$icon-shrek1-image: '/images/sprite-shrek.png';
+$icon-shrek1: (0px, 0px, 0px, 0px, 256px, 256px, 522px, 522px, '/images/sprite-shrek.png', 'icon-shrek1', );
+$icon-shrek2-name: 'icon-shrek2';
+$icon-shrek2-x: 266px;
+$icon-shrek2-y: 0px;
+$icon-shrek2-offset-x: -266px;
+$icon-shrek2-offset-y: 0px;
+$icon-shrek2-width: 256px;
+$icon-shrek2-height: 256px;
+$icon-shrek2-total-width: 522px;
+$icon-shrek2-total-height: 522px;
+$icon-shrek2-image: '/images/sprite-shrek.png';
+$icon-shrek2: (266px, 0px, -266px, 0px, 256px, 256px, 522px, 522px, '/images/sprite-shrek.png', 'icon-shrek2', );
+$icon-shrek3-name: 'icon-shrek3';
+$icon-shrek3-x: 0px;
+$icon-shrek3-y: 266px;
+$icon-shrek3-offset-x: 0px;
+$icon-shrek3-offset-y: -266px;
+$icon-shrek3-width: 256px;
+$icon-shrek3-height: 256px;
+$icon-shrek3-total-width: 522px;
+$icon-shrek3-total-height: 522px;
+$icon-shrek3-image: '/images/sprite-shrek.png';
+$icon-shrek3: (0px, 266px, 0px, -266px, 256px, 256px, 522px, 522px, '/images/sprite-shrek.png', 'icon-shrek3', );
+$icon-shrek4-name: 'icon-shrek4';
+$icon-shrek4-x: 266px;
+$icon-shrek4-y: 266px;
+$icon-shrek4-offset-x: -266px;
+$icon-shrek4-offset-y: -266px;
+$icon-shrek4-width: 256px;
+$icon-shrek4-height: 256px;
+$icon-shrek4-total-width: 522px;
+$icon-shrek4-total-height: 522px;
+$icon-shrek4-image: '/images/sprite-shrek.png';
+$icon-shrek4: (266px, 266px, -266px, -266px, 256px, 256px, 522px, 522px, '/images/sprite-shrek.png', 'icon-shrek4', );
+$spritesheet-width: 522px;
+$spritesheet-height: 522px;
+$spritesheet-image: '/images/sprite-shrek.png';
+$spritesheet-sprites: ($icon-shrek1, $icon-shrek2, $icon-shrek3, $icon-shrek4, );
+$spritesheet: (522px, 522px, '/images/sprite-shrek.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
