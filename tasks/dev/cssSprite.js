@@ -6,7 +6,7 @@ export function cssSprite () {
     const spriteData = gulp.src('src/images/icons/*.png', { encoding: false }).pipe(spritesmith({
         imgName: 'sprite-shrek.png',
         cssName: '_shrek.scss',
-        imgPath: '/images/sprite-shrek.png',
+        imgPath: '../images/sprite-shrek.png',
         cssFormat: 'scss',
         cssVarMap: function(sprite) {
             sprite.name = 'icon-' + sprite.name;
