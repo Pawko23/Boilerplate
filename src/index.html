@@ -3,23 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.min.css">
     <title>Boilerplate</title>
 </head>
 <body>
+    <h1 class="fonts-heading">Font test title</h1>
     <div class="employee-container">
-        <div class="employee-container__form">
+        <form class="employee-form">
             <input 
                 type="text" 
-                class="employee-container__input"
+                class="employee-form__input"
                 placeholder="Enter employee name"
                 id="employeeInput"
+                required
             />
-            <button class="employee-container__add-button" id="addButton">Add</button>
-        </div>
-        <ul class="employee-container__list" id="employeeList"></ul>
+            <button class="employee-form__button" id="addButton">Add</button>
+        </form>
+        <ul class="employee-list" id="employeeList"></ul>
     </div>
 
-    <script src="./js/employeeList.js"></script>
+    <script src="./js/main.min.js"></script>
 </body>
 </html>

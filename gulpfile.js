@@ -9,11 +9,13 @@ import { serve } from './tasks/dev/serve.js';
 import { watchFiles } from './tasks/dev/watch.js';
 import { lint } from './tasks/lint/eslint.js';
 import { rev } from './tasks/prod/rev.js';
+import { fonts } from './tasks/dev/fonts.js';
+import { fontsProd } from './tasks/prod/fontsProd.js';
 
 export const dev = gulp.series(
     lint,
     clean,
-    gulp.parallel(html, styles, scripts),
+    gulp.parallel(html, styles, scripts, fonts),
     serve,
     watchFiles,
 );
@@ -21,6 +23,6 @@ export const dev = gulp.series(
 export const build = gulp.series(
     lint,
     clean,
-    gulp.parallel(html, stylesProd, scriptsProd),
+    gulp.parallel(html, stylesProd, scriptsProd, fontsProd),
     rev,
 );

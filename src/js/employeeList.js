@@ -9,7 +9,7 @@ const addEmployee = (name) => {
 
     const li = document.createElement('li');
     li.textContent = name;
-    li.classList.add('employee-container__list-item');
+    li.classList.add('employee-list__item');
     list.appendChild(li);
 
     input.value = '';
